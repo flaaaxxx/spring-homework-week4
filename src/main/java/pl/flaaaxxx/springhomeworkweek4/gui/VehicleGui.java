@@ -32,9 +32,8 @@ public class VehicleGui extends VerticalLayout {
         this.vehicleManager = vehicleManager;
 
         Grid<Vehicle> grid = new Grid<>(Vehicle.class);
-//        grid.setHeightByRows(true);
         grid.setHeight("300px");
-//        delete vehicle
+
         grid.addColumn(new ComponentRenderer<>((vehicle) -> {
             return new Button("Delete", clickEvent -> {
                 vehicleManager.deleteVehicle(
